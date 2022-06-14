@@ -57,15 +57,17 @@ nav {
     Shopping cart icon
     Shopping cart badge
 */
-.shopping-cart-icon {
+.shopping-cart-button {
     position: relative;
     font-size: 1.1rem;
+    cursor: pointer;
 }
 
-.shopping-cart-icon > span {
+.shopping-cart-number {
     position: absolute;
-    top: -12px;
-    left: 15px;
+    top: 5px;
+    right: 25px;
+    cursor: pointer;
 }
 
 
@@ -226,7 +228,7 @@ video {
     border-radius: 18px;
     padding: 10px;
     width: 310px;
-    height: 400px;
+    height: 350px;
     background: var(--main-bg-color);
     /* change to flex after button clicked */
     display: none;
@@ -320,6 +322,7 @@ video {
     border: 1px solid var(--main-border-color);
 }
 
+
 /*
     Shop  
 */
@@ -344,20 +347,6 @@ video {
     flex-direction: column;
 }
 
-/*
-.buy-button-col > i {
-    font-size: 1.25rem;
-    align-items: center;
-}
-
-
-.buy-number {
-    text-align: center;
-    vertical-align: start;
-    font-size: 1.25rem;
-}
-*/
-
 .product-title {
     font-size: 1.5rem;
     font-weight: bold;
@@ -374,3 +363,53 @@ video {
 }
 
 
+/*
+    Shopping Cart
+*/
+
+.shopping-cart {
+    position: absolute;
+    right: 10px;
+    top: 51px;
+    border: 2px solid var(--main-border-color);
+    border-radius: 18px;
+    padding: 10px;
+    width: 310px;
+    height: 350px;
+    background: var(--main-bg-color);
+    /* change to flex after button clicked */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.shopping-cart-title {
+    text-align: center;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--main-border-color);
+}
+
+.shopping-cart-uppergrid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    height: 100%;
+    margin-bottom: 5px;
+    border-bottom: 1px solid var(--main-border-color);
+}
+
+/*
+.buy-button-col > i {
+    font-size: 1.25rem;
+    align-items: center;
+}
+
+
+.buy-number {
+    text-align: center;
+    vertical-align: start;
+    font-size: 1.25rem;
+}
+*/
