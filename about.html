@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="author" content="Evan Cheung, ">
+    <meta name="description" content="Hiking Project">
+    <meta name="keyword" content="Hiking"> 
+    <meta name="robots" content="index, follow">   
+    
+    <link rel="shortcut icon" href="./src/img/navbar_logo.svg" type="image/png">  
+    <title> Hiking - About us</title>  
+
+    <link rel="stylesheet" href="./css/style_about.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-light sticky-top"> 
+        <div class="container-fluid">
+            <a href="./index.html" class="navbar-brand ms-2" title="Hiking">
+                <img src="./src/img/navbar_logo.svg"></img>             
+            </a>
+
+            <button class="navbar-toggler mb-2 me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse ms-auto" id="navbarToggler">
+                <ul class="navbar-nav mx-auto me-4">
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="./trails.html" > Trails</a>
+
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"> Trails 1 </a></li>
+                            <li><a class="dropdown-item" href="#"> Trails 2 </a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#"> Trails 3</a></li>
+                        </ul>
+                    </li>                
+                                     
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about.html"> About </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contact.html"> Contact </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./shop.html"> Shop </a>
+                    </li>  
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./shopping-cart.html">
+                            <i class="shopping-cart-button bi bi-cart-fill"></i> 
+                            <span class="shopping-cart-number badge rounded-pill bg-danger"> 0 </span>               
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>     
+    </nav> 
+
+    <h2 class="display-5 text-center mt-4"> 關於我們 </h2>
+
+    <div class="container d-flex justify-content-end mt-4">
+        <div id="adjustFontSizeBtnGrp" class="btn-group mb-3 ml-auto"  role="group">
+            <button type="button" class="btn btn-success" onclick="changeFontSizeSm()"><span id="fontBtnText1">A-</span> </button>
+            <button type="button" class="btn btn-success" onclick="changeFontSizeMd()"><span id="fontBtnText2">A</span> </button>
+            <button type="button" class="btn btn-success" onclick="changeFontSizeLg()"><span id="fontBtnText3">A++</span> </button>
+        </div>
+    </div>
+
+    <div class="container d-flex justify-content-end">
+        <div id="adjustFontSizeRange">
+            <label for="fontRange" class="form-label"></label>
+            <input type="range" class="form-range" min="14" max="36" step="3" id="fontRange" onchange="changeFontSizeRange()" value="17">
+        </div>
+    </div>
+
+    
+    <div id="textHeadContainer" class="d-flex flex-column justify-content-between">
+        <div class="container mt-2">
+            <h3 id="paraTitle1" class="display-6"> 起源和誕生 </h3>
+            
+            <p id="paraInText1" class="">
+                &emsp;&emsp;&emsp;&emsp;&emsp;<a href="./index.html">hiking.hk</a> 是由一群熱愛大自然, 喜愛分享行山和大自然資訊的網頁開發學生所開發出來的網站。<br><br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;本站於2022年起正式進入開發階段, 主要目的是為了推廣本土行山徑、讓大家可以親近和接觸大自然、觀賞風景、體驗鄉郊文化的同時希望提升大眾對環境保護的意識, 亦希望透過編寫這個網站而能夠將課堂上學到的知識技巧等運用出來, 若能寫出讓讀者們覺得有意義的東西是我們最大的鼓舞和接下來的動力來源; 我想, 這也基本地說明了這個網站為甚麼會誕生的原因了。
+            </p> 
+        </div>
+
+        <div class="container mt-5">
+            <h3 id="paraTitle2" class="display-6"> 環境保護意識 </h3>
+            
+            <p id="paraInText2" class="">
+                &emsp;&emsp;&emsp;&emsp;&emsp;香港在城市基建發展迅速, 對大自然的破壞亦變相地加劇。從海邊可拾獲到的廢棄物、垃圾、膠樽、塑膠製品, 到近來在郊野區域能夠找到用完即棄的紙巾、口罩等等這些被人們隨意掉棄的行為, 實在是令人髮指, 亦向我們表達了市民大眾對於保護環境的意識是何等的薄弱, 發人深省。<br><br>
+
+                &emsp;&emsp;&emsp;&emsp;&emsp;有見及此, 我們這群少眾的學生, 想希望透過本網站, 向大眾市民提供郊遊資訊的同時, 亦希望可以宣導一下如何能夠確實地保護和愛惜我們身邊僅餘的綠化地帶、郊野公園、以及行山徑。若任由其他人再去繼續破壞這些僅餘的自然環境、假以時日, 相信生態環境或多或少會因受到各種的污染破壞而消失、或令依靠這些環境生活的物種失去家園、誤食垃圾等影響生態平衡的異常情況頻繁出現。
+            </p> 
+        </div>
+
+        
+        <div class="container mt-5">
+            <h3 id="paraTitle3" class="display-6"> 我們的初心 </h3>
+            <p id="paraInText3" class="">
+                &emsp;&emsp;&emsp;&emsp;&emsp;為了在疲情不斷, 斷斷續續的爆發與蔓延中; 為著熱愛和享受大自然的大家帶來一點可喘息的空間, 可以去追求大自然所帶來的一刻寧靜、去體驗大自然
+                的美好、感受身邊一切和環境帶給我們真正的 「<b>內 &nbsp; 心 &nbsp; 平 &nbsp; 靜</b> 、 <b>&nbsp; 身 &nbsp; 心 &nbsp; 舒 &nbsp; 暢</b>」 的一刻。
+            </p>
+        </div>
+        
+        <div class="container mt-5">
+            <h3 id="paraTitle4" class="display-6"> 自然的訴求 </h3>
+            <p id="paraInText4" class="">
+                &emsp;&emsp;&emsp;&emsp;&emsp;或許可以說是活在都市的人們長久以來都忽略了的初心, 活在 "石屎森林" 的世界, 過著每天繁重的工作生活模式。工作永遠做不完等等 ...。<br>
+                "不如就在假日或閒時, 到郊外走走, 吸呼新鮮空氣。" &#8212;相信會說這句的人很多、但卻沒有實際行動。生活不該如此, 就抽個時間去體驗「<a href="https://zh.wikipedia.org/zh-hk/%E6%A3%AE%E6%9E%97%E6%B5%B4">森林浴</a>」的魅力所在、感受「<a href="https://zh.wikipedia.org/zh-hk/%E8%8A%AC%E5%A4%9A%E7%B2%BE">芬多精</a>」這個天然的另類舒緩壓力及疲勞的新派療法。
+                
+            </p>
+        </div>
+
+        <div class="container mt-5">
+            <h3 id="paraTitle5" class="display-6"> 原來的我們 </h3>
+            <p id="paraInText5" class="">
+                &emsp;&emsp;&emsp;&emsp;&emsp;其實只是一群有著少許想法的三人組合, 在一埸機緣巧遇下能夠認識、共同討論, 並為著一個非常明確的目標一起創作, 一步一步地努力讓網站能夠誕生出來。<br> 
+                我想這點在我們心裡是很清楚的。從零到有, 從未對網頁開發有深入的認識, 到能夠寫出這個網頁, 除了我們三人以外, 也要籍這個機會感謝 Aaron 老師的悉
+                心教導, 每當我們有問題提出, 他就一定會用心的為我們找到問題的答案。 真的很感謝他在這段時間的付出, 希望我們能夠學以致用, 感謝您的 "超前部署"。
+            </p>
+        </div>
+
+        <div class="container mt-5 mb-5">
+            <h3 id="paraTitle6" class="display-6"> 未來發展動態 </h3>
+            <p id="paraInText6" class="">
+                &emsp;&emsp;&emsp;&emsp;&emsp;目前這個網站正處於一個非常初步的階段, 我們目前尚未考慮到這個網站在將來的後續發展, 但我們相信這裡的一切在接下來的時間裡會被保留下來, 可以為我們
+                這個三人小組提供一個可信賴依靠的網頁環境 / 平台, 亦非常感謝課程中有機會可以讓這個網頁被實際地創作出來。
+            </p>
+        </div>
+
+        <div class="container d-flex justify-content-end text-muted">
+            <span id="innerTimeStamp" class="align-self-end"> @ June 2022 </span>
+        </div>
+    </div>
+
+    
+
+    <footer class="text-center text-muted">
+        <hr>
+        <div class="footer-copy-right">
+            Copyright © 2022 Evan Cheung All rights reserved.
+        </div>
+
+        <div class="footer-legal">
+            <a href="#" class="text-muted">
+                <span>Privacy Policy</span>
+                <span>Terms of Use</span>
+                <span>Sales and Refunds</span>
+                <span>Legal</span>
+                <span>Site Map</span>
+            </a>            
+        </div>       
+    </footer>
+
+    <div class="bottom-box sticky-bottom">
+        <a href="#" title="Back to Top">
+            <i class="back-to-top bi bi-arrow-up-circle"></i>
+        </a>
+    </div>
+
+
+
+    
+    <script src="https://kit.fontawesome.com/0f247ccc67.js" integrity="sha384-ksDW8QT6bXZ7xqu//ovG4jNPQPDZ4ADtwgySJfQaAIiZMxDw6BaMj/fr9fdulkr7" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="./js/about.js"></script>
+</body>
+</html>
