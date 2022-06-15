@@ -45,7 +45,6 @@ nav {
         background: var(--main-bg-color);
         margin-top: -4px;
         width: 100%;
-
     }
     .navbar-nav > li {
         padding-left: 15px;
@@ -65,8 +64,8 @@ nav {
 
 .shopping-cart-number {
     position: absolute;
-    top: 5px;
-    right: 25px;
+    top: 3px;
+    right: 24px;
     cursor: pointer;
 }
 
@@ -366,7 +365,7 @@ video {
 /*
     Shopping Cart
 */
-
+/*
 .shopping-cart {
     position: absolute;
     right: 10px;
@@ -377,8 +376,8 @@ video {
     width: 310px;
     height: 350px;
     background: var(--main-bg-color);
-    /* change to flex after button clicked */
-    display: flex;
+    
+    display: flex; // change to flex after button clicked
     flex-direction: column;
     justify-content: space-between;
 }
@@ -392,13 +391,27 @@ video {
 
 .shopping-cart-uppergrid {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
     overflow-y: auto;
     height: 100%;
+    width: 100%;
     margin-bottom: 5px;
     border-bottom: 1px solid var(--main-border-color);
 }
+
+.shopping-cart-items {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%;
+    width: 100%;
+    border-bottom: 1px dotted var(--main-border-color);
+    padding: 5px 10px;
+
+}
+
 
 /*
 .buy-button-col > i {
