@@ -8,6 +8,7 @@
     --main-border-color: rgb(124, 124, 124);
     --chatbox-othermsg-color: rgb(124, 124, 124);
     --chatbox-selfmsg-color: #9DB541;
+    --shop-title-bg-color: rgb(249, 239, 239);
     --main: #9FD3A9;
     --set-a1: #E8E9DC;
     --set-a2: #788051;
@@ -18,11 +19,11 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 html {
     font-size: 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 body {
@@ -368,6 +369,40 @@ video {
 /*
     Shopping Cart
 */
+.shopping-cart-title {
+    background-color: var(--shop-title-bg-color);
+    padding: 10px 0px;
+    border-bottom: 1px solid var(--main-border-color);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.shopping-cart-items {
+    padding: 5px 0px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--main-border-color);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.shop-items-img {
+    height: 10vh;
+}
+
+.shopping-cart-quantity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shopping-cart-delete > i {
+    font-size: 1.2rem;
+}
+
+
+
 /*
 .shopping-cart {
     position: absolute;
@@ -379,18 +414,12 @@ video {
     width: 310px;
     height: 350px;
     background: var(--main-bg-color);
-    
-    display: flex; // change to flex after button clicked
+    display: flex; 
     flex-direction: column;
     justify-content: space-between;
 }
 
-.shopping-cart-title {
-    text-align: center;
-    padding-bottom: 5px;
-    margin-bottom: 10px;
-    border-bottom: 1px solid var(--main-border-color);
-}
+
 
 .shopping-cart-uppergrid {
     display: flex;
@@ -429,17 +458,3 @@ video {
     font-size: 1.25rem;
 }
 */
-
-/* 
-contact page links 
-*/
-#companyInfoLink > a {
-    color: var(--main-link-color);
-}
-
-/* 
-about page links 
-*/
-.container a {
-    color: var(--main-link-color);
-}
