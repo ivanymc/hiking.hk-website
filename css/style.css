@@ -364,6 +364,41 @@ video {
     font-style: oblique;
 }
 
+/*
+    Shopping Cart
+*/
+.shopping-cart-title {
+    background-color: var(--shop-title-bg-color);
+    padding: 10px 0px;
+    border-bottom: 1px solid var(--main-border-color);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.shopping-cart-items {
+    padding: 5px 0px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--main-border-color);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.shop-items-img {
+    height: 10vh;
+}
+
+.shopping-cart-quantity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shopping-cart-delete > i {
+    font-size: 1.2rem;
+}
+
 
 /*
     Shopping Cart
