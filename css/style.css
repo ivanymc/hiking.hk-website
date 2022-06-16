@@ -18,12 +18,17 @@
 * {
     margin: 0;
     padding: 0;
-    font-size: 16px;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    
+}
+
+html {
+    font-size: 16px;
 }
 
 body {
     overflow-x: hidden;
+    
 }
 
 
@@ -45,6 +50,7 @@ nav {
         background: var(--main-bg-color);
         margin-top: -4px;
         width: 100%;
+
     }
     .navbar-nav > li {
         padding-left: 15px;
@@ -56,17 +62,15 @@ nav {
     Shopping cart icon
     Shopping cart badge
 */
-.shopping-cart-button {
+.shopping-cart-icon {
     position: relative;
     font-size: 1.1rem;
-    cursor: pointer;
 }
 
-.shopping-cart-number {
+.shopping-cart-icon > span {
     position: absolute;
-    top: 3px;
-    right: 24px;
-    cursor: pointer;
+    top: -12px;
+    left: 15px;
 }
 
 
@@ -365,7 +369,7 @@ video {
 /*
     Shopping Cart
 */
-/*
+
 .shopping-cart {
     position: absolute;
     right: 10px;
@@ -376,8 +380,8 @@ video {
     width: 310px;
     height: 350px;
     background: var(--main-bg-color);
-    
-    display: flex; // change to flex after button clicked
+    /* change to flex after button clicked */
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
@@ -391,27 +395,13 @@ video {
 
 .shopping-cart-uppergrid {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     overflow-y: auto;
     height: 100%;
-    width: 100%;
     margin-bottom: 5px;
     border-bottom: 1px solid var(--main-border-color);
 }
-
-.shopping-cart-items {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    height: 100%;
-    width: 100%;
-    border-bottom: 1px dotted var(--main-border-color);
-    padding: 5px 10px;
-
-}
-
 
 /*
 .buy-button-col > i {
@@ -426,3 +416,20 @@ video {
     font-size: 1.25rem;
 }
 */
+
+
+/* 
+Contact page links
+*/
+
+#companyInfoLink a {
+    color: var(--main-link-color);
+}
+
+#guestComment {
+    min-height: 10rem;
+}
+/*
+About page font size adjusted with js, and css html {}
+ */
+
