@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="author" content="Evan Cheung, ">
+    <meta name="description" content="Hiking Project">
+    <meta name="keyword" content="Hiking"> 
+    <meta name="robots" content="index, follow">   
+    
+    <link rel="shortcut icon" href="./src/img/navbar_logo.svg" type="image/png">  
+    <title> Hiking - 西貢之巔 </title>  
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-light sticky-top"> 
+        <div class="container-fluid">
+            <a href="./index.html" class="navbar-brand ms-2" title="Hiking">
+                <img src="./src/img/navbar_logo.svg"></img>             
+            </a>
+    
+            <button class="navbar-toggler mb-2 me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse ms-auto" id="navbarToggler">
+                <ul class="navbar-nav mx-auto me-4">
+    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="./trail1.html" > Trails</a>
+    
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./trail1.html"> 西貢之巔 </a></li>
+                            <li><a class="dropdown-item" href="./trail8.html"> 港景峰 </a></li>
+                            <li><a class="dropdown-item" href="./trail9.html"> 本土高原 </a></li>
+                                                        <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="./trail2.html"> 古道之行</a></li>
+                            <li><a class="dropdown-item" href="./trail3.html"> 壁畫村</a></li>
+                            <li><a class="dropdown-item" href="./trail4.html"> 地心探險</a></li>
+                            <li><a class="dropdown-item" href="./trail5.html"> 邊境之旅</a></li>
+                            <li><a class="dropdown-item" href="./trail6.html"> 東北村落</a></li>
+                            <li><a class="dropdown-item" href="./trail7.html"> 天水圍城</a></li>
+                        </ul>
+                    </li>                
+                                     
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about.html"> About </a>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contact.html"> Contact </a>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link" href="./shop.html"> Shop </a>
+                    </li>  
+    
+                    <li class="nav-item">
+                        <a class="nav-link" href="./shopping-cart.html">
+                            <i class="shopping-cart-button bi bi-cart-fill"></i> 
+                            <span class="shopping-cart-number badge rounded-pill bg-danger"> 0 </span>               
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>     
+    </nav>
+    
+
+
+    <h2 class="display-5 text-center mt-4"> 西貢之巔 / 石屋山 </h2> 
+    
+    
+    <div class="container d-flex justify-content-end col-3 text-muted mb-4">
+        <span id="updateDate">update @ 2022 June 16</span>
+    </div>
+    
+
+    <div id="routeDetails">
+
+        <div id="routeSimpfiedDetails">
+            <div class="container d-flex flex-column justify-content-between col-7">
+                <div id="climbHeight">
+                    <span>標高:&ensp; 481米 </span> 
+                </div>
+
+                <div id="climbDifficulty">
+                    <span>難易度評分:&nbsp; 8 / 10 </span> 
+                </div>
+
+                <div id="climbView">
+                    <span>路線長度:&nbsp; 7 kM </span> 
+                </div>
+
+                <div id="climbTime">
+                    <span>預計需時:&ensp; 約 4.5 小時 </span>
+                </div>
+
+                <div id="facility">
+                    <span>設施 / 補給點: &ensp; <a href="#routeMap">嶂上: 士多</a> </span> 
+                    <img></img>
+                    <img></img>
+                    <img></img>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="vdo-container">
+            <div id="routeVideo">
+                <video
+                    src="./src/video/textclip.mp4"
+                    id="routeVideo"
+                    preload autoplay muted loop controls>
+                </video>
+
+                
+            </div>
+        </div>
+
+
+        <div id="route-text-container" class="m-5">
+            <div class="container">
+                <p>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;石屋山高海拔481米，山頂設有無線電話發射站及直升機坪。石屋山是西貢第一高峰，比香港第一尖蚺蛇尖(高海拔468米)還要高，但石屋山的名氣遠遠不及蚺蛇尖，而石屋山的行山徑狀況亦遠不及蚺蛇尖良好。另外，石屋山附近的老虎騎石亦建有山火暸望台，因此不妨選擇一拼行走老虎騎石及石屋山。<br><br>
+
+                    &emsp;&emsp;&emsp;&emsp;&emsp;難度方面，石屋山路線平路欠奉，都是上山落山，而且沿路都佈滿長草，支路繁多，整體不算好走，還好路程不長，又有士多休息，但還是建議與有經驗人士同行。<br><br>
+
+                    &emsp;&emsp;&emsp;&emsp;&emsp;景色方面，路線一開始已經可以參觀山火暸望台，而且沿路各個山峰景觀都非常開揚，尤其是石屋山頂風景更加暸闊，整體風景相當不俗。
+                    
+                </p>
+            </div>
+        </div>
+
+
+
+        <div id="routeCarousel" class="carousel slide carousel-fade mt-5" data-bs-ride="carousel">
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+                <li data-bs-target="#routeCarousel" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#routeCarousel" data-bs-slide-to="1"></li>
+                <li data-bs-target="#routeCarousel" data-bs-slide-to="2"></li>
+                <li data-bs-target="#routeCarousel" data-bs-slide-to="3"></li>
+                <li data-bs-target="#routeCarousel" data-bs-slide-to="4"></li>
+            </ul>
+            
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-50 m-auto" src="./src/img/T01_Sai_Kung/M043_015.jpg" alt="routePhoto1">
+                    <div class="carousel-caption">
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-50 m-auto" src="./src/img/T01_Sai_Kung/M043_036.jpg" alt="routePhoto2">
+                    <div class="carousel-caption text-dark">
+                        <h3 class="fw-bold"></h3>
+                        <p class="fw-bold"></p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-50 m-auto" src="./src/img/T01_Sai_Kung/M043_038.jpg" alt="routePhoto3">
+                    <div class="carousel-caption text-dark">
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-50 m-auto" src="./src/img/T01_Sai_Kung/M043_014.jpg" alt="routePhoto4">
+                    <div class="carousel-caption text-dark">
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-50 m-auto" src="./src/img/T01_Sai_Kung/M043_046.jpg" alt="routePhoto5">
+                    <div class="carousel-caption text-dark">
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Left and right controls -->
+            <button class="carousel-control-prev" href="#routeCarousel" data-bs-slide="prev" type="button">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="sr-only">Previous</span>
+            </button>
+            <button class="carousel-control-next" href="#routeCarousel" data-bs-slide="next" type="button">
+                <span class="carousel-control-next-icon"></span>
+                <span class="sr-only">Next</span>
+            </button>
+        </div>
+       
+
+
+        <div id="route-part-container" class="row d-flex flex-row justify-content-between mt-5">
+        
+            <div class="container-fluid text-center col-lg-6 col-sm-12 col-md-6">
+                <h4>分段路線:</h4><br>
+
+                <p>海下路</p>
+                <p>海下山火暸台(老虎騎石)</p>
+                <p>石屋山</p>
+                <p>- - - - - - - - - - - - - -</p>
+                <p>嶂上</p>
+                <p>- - - - - - - - - - - - - -</p>
+                <p>岩頭山</p>
+                <p>牛耳石山</p>
+                <p>北潭凹</p>
+            
+            </div> 
+
+            <div class="container-fluid align-self-center col-lg-6 col-sm-12 col-md-6">
+                <img id="routeMap" class="" src="./src/img/T01_Sai_Kung/T01_map.png" alt="Route-map">
+            </div>
+            
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+    <footer class="text-center text-muted">
+        <hr>
+        <div class="footer-copy-right">
+            Copyright © 2022 Evan Cheung All rights reserved.
+        </div>
+
+        <div class="footer-legal">
+            <a href="#" class="text-muted">
+                <span>Privacy Policy</span>
+                <span>Terms of Use</span>
+                <span>Sales and Refunds</span>
+                <span>Legal</span>
+                <span>Site Map</span>
+            </a>            
+        </div>       
+    </footer>
+
+    <div class="bottom-box sticky-bottom">
+        <a href="#" title="Back to Top">
+            <i class="back-to-top bi bi-arrow-up-circle"></i>
+        </a>
+    </div>
+
+
+
+    <script src="https://kit.fontawesome.com/0f247ccc67.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="./js/shop.js"></script>
+</body>
+</html>
