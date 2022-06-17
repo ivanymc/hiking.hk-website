@@ -95,13 +95,13 @@
                         <form class="" action="">
                             <h4 id="formTitle" class="text-center">Anything To Tell Us?</h4>
                             <label for="guestname">Name</label> <br>
-                            <input class="form-control" type="text" id="inputName" name="Name" placeholder="e.g. Alex Chan" minlength="1" maxlength="30" pattern="[A-Za-z][a-zA-Z\s]+" required><br><br>
+                            <input class="form-control" type="text" id="inputName" name="Name" placeholder="e.g. Alex Chan" minlength="1" maxlength="50" pattern="[A-Za-z1-9\s]+" required><br><br>
 
                             <label for="guestEmail">Email</label> <br>
-                            <input class="form-control" type="email" id="inputEmail" name="Email" placeholder="e.g. ABC@email.com" minlength="1" maxlength="40" required> <br><br>
+                            <input class="form-control" type="email" id="inputEmail" name="Email" placeholder="e.g. ABC@email.com" minlength="1" maxlength="60" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required> <br><br>
 
                             <label for="guestComment">Leave us a comment</label> <br>
-                            <textarea class="form-control" id="guestComment" name="guestComment" placeholder="Say something..."></textarea> <br><br>
+                            <textarea class="form-control" id="guestComment" name="guestComment" placeholder="Say something..." minlength="1" required></textarea> <br><br>
 
                             
                             <input class="btn btn-success form-control" type="submit" id="submitBtn">
