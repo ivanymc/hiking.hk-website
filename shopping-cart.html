@@ -80,46 +80,56 @@
             <div class="col-2"> 刪除 </div>       
         </div>
 
-        <div class="shopping-cart-list">
-            <div class="shopping-cart-items row">
-                <div class="shopping-cart-image col">
-                    <img src="./src/img/avatar.png" class="shop-items-img" title="Product 1" alt="Product 1">
-                </div>
-                <div class="shopping-cart-product col"> Cat </div>
-                <div class="shopping-cart-quantity col"> 
-                    <input type="button" value="-" class="buy-minus-button input-group-text disabled">
-                    <span class="buy-number form-control w-25"> 1 </span>
-                    <input type="button" value="+" class="buy-add-button input-group-text">
-                </div>        
-                <div class="shopping-cart-price col"> $ 200 </div>  
-                <div class="shopping-cart-delete col-2">
-                    <i class="bi bi-trash3"></i>
-                </div>       
-            </div>
-        </div>
+        <div class="shopping-cart-list">   </div>
         
 
+        <div class="container-fluid mt-4">
+            <div class="order-details row justify-content-between">                 
+                
+                <div class="delivery-container col-lg-7 col-sm-12">
+                    <div class="order-details-title p-2 ps-4"> 訂單資訊 </div>
+                    <div class="order-delivery px-3 py-1">                    
+                        <div class="form-title mb-1 mt-2 ms-2"> 運送方式 </div>
+                        <select class="form-select">
+                            <option value="1"> 自取 </option>
+                            <option value="2"> 順豐智能櫃 </option>
+                            <option value="3"> 順豐自取點 </option>
+                        </select>
+    
+                        <div class="form-title mt-3 mb-1 mt-2 ms-2"> 訂單備注 </div>
+                        <textarea class="form-control" placeholder="如貨品需要特別處理，請在此留言給我們" rows="5" cols="50"></textarea>
+                    </div>
+                </div>
+                
 
+                <div class="checkout-container col-lg-4 col-sm-12">
+                    <div class="order-details-title p-2 ps-4"> 訂單價錢 </div>
+                    <table class="mt-2 ms-4">
+                        <tbody>                      
+                            <tr>
+                                <td> 產品價錢： </td>
+                                <td class="items-price-subtotal" >   8 </td>
+                            </tr>
 
+                            <tr>
+                                <td> 運費： </td>
+                                <td class="delivery-fees-subtotal" >   8 </td>
+                            </tr>
 
-        <br><br><br><br><br>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                            <tr>
+                                <td> 折扣： </td>
+                                <td class="items-discount-subtotal" >   8</td>
+                            </tr>
 
-        <div class="row">
-            <div class="col">
-                <div class="col"> 1</div>
-                <div class="col">2</div>
-                <div class="col">3</div>
-            </div>
-            <div class="col">
-                <div class="col">1</div>
-                <div class="col">2</div>
-                <div class="col">3</div>
-                <div class="col">4</div>
-                <div class="col">5</div>
+                            <tr>
+                                <td> 合共： </td>
+                                <td class="items-price-total" >   8</td>
+                            </tr>
+                        </tbody> 
+                    </table>
+                </div>
             </div>
         </div>
-
     </div>
 
 
@@ -179,8 +189,8 @@
     <script src="https://kit.fontawesome.com/0f247ccc67.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <script src="./js/chatbox.js"></script>
-    <script src="./js/shop.js"></script>    
-    <script src="./js/shopping-cart.js"></script>
+    <script src="./js/shop.js"></script>   
+    <script src="./js/shopping-cart.js"></script> 
     
 
 

@@ -7,68 +7,76 @@ const ADD_TO_SHOPPING_CART_BUTTON = document.querySelectorAll('.add-to-shopping-
 const SHOPPING_CART_NUMBER = document.querySelector(".shopping-cart-number");
 
 
-
-// load local storage shoppingCartNumber
-let storage = JSON.parse(localStorage.getItem("ShoppingCart")) || [ ];
+// load local storage shopping Cart Number
 let shoppingCartNumber = 0;
-if (storage.length != 0) {
-    SHOPPING_CART_NUMBER.innerHTML = JSON.parse(localStorage.getItem("ShoppingCart")).length;
-    shoppingCartNumber = JSON.parse(localStorage.getItem("ShoppingCart")).length;
+let cartTotalNumber = JSON.parse(localStorage.getItem("cartTotalNumber")) || [ ];
+if (cartTotalNumber.length != 0) {
+    SHOPPING_CART_NUMBER.innerHTML = JSON.parse(localStorage.getItem("cartTotalNumber")).length;
+    shoppingCartNumber = JSON.parse(localStorage.getItem("cartTotalNumber")).length;
 };
 
-// Count how many product added 
+let shoppingList = JSON.parse(localStorage.getItem("shoppingList")) || [ ];
+
+
+// Every time click the shopping cart buttons
+// count total number
+// Add the product into local storage
+// let cart.js can use the local storage
 Array.from(ADD_TO_SHOPPING_CART_BUTTON).forEach( button => {
     button.addEventListener('click', e => {
         e.preventDefault();
-
-        // Show in the cart number
+        
+        // Count how many product added, and show in the cart number
         shoppingCartNumber++;
         SHOPPING_CART_NUMBER.innerHTML = shoppingCartNumber;
+
+        // Add the number and shopping list to local storage
+        cartTotalNumber.push( { 
+            cartTotalNumber: shoppingCartNumber,
+        } );
+        localStorage.setItem("cartTotalNumber", JSON.stringify(cartTotalNumber));
+
 
         // Add to shopping cart
         let productName = e.target.parentNode.previousElementSibling.previousElementSibling;
         let productImage = e.target.parentNode.parentNode.previousElementSibling.firstElementChild;
         let productPrice = e.target.previousElementSibling;
+        let productID = e.target.parentNode.parentNode.parentNode;
+        let productQuantity = 1;
+        // if(shoppingList.length != 0) {
+        //     productQuantity =  JSON.parse(localStorage.getItem("shoppingList")).quantity;
+        // }
+        // console.log(productQuantity);
 
-        // .outerHTML directly convert to string
-        let text = '<div class="shopping-cart-items row">'
-                        + '<div class="shopping-cart-image col">' 
-                            + productImage.outerHTML
-                        + '</div>'
-                        + '<div class="colshopping-cart-product col">'
-                            + productName.innerHTML
-                        + '</div>'
-                        + '<div class="shopping-cart-quantity col">'
-                            + '<input type="button" value="-" class="buy-minus-button input-group-text disabled">'
-                            + '<span class="buy-number form-control w-25">' 
-                                +  '1'
-                            + '</span>'
-                            + '<input type="button" value="+" class="buy-add-button input-group-text">'
-                        + '</div>'
-                        + '<div class="shopping-cart-price col">'
-                            + productPrice.innerHTML 
-                        + '</div>'
-                        + '<div class="shopping-cart-delete col-2">'
-                            + '<i class="bi bi-trash3"></i>'
-                        + '</div>'
-                    + '</div>'
-        
-        // Add the number and shopping list to local storage
-        storage.push( { 
-            shoppingCartNumber: shoppingCartNumber,
-            shoppingList: text
-         } );
-
-        storage.push( { 
-            shoppingCartNumber: shoppingCartNumber,
-            shoppingList: text
-         } );
-
-
-        localStorage.setItem("ShoppingCart", shoppingCartNumber);
-        localStorage.setItem("ShoppingCart", JSON.stringify(storage));
+        // If item alreay exist in local storage , only increase quantity, not add new object
+        if (shoppingList.length > 0 ) {                         // if something already exist
+            for (let i = 0; i < shoppingList.length; i++) {
+                if ( productID.id == shoppingList[i].id ) {     // check id already exist, if yes
+                    shoppingList[i].quantity++;
+                    localStorage.setItem("shoppingList", JSON.stringify(shoppingList));
+                    return;
+                } else if ( i == shoppingList.length - 1 ) {    //  if not exist and only push once eg: i = 0 , i < 1 , only loop once
+                    shoppingList.push ({
+                        id: productID.id,
+                        name: productName.innerHTML,
+                        quantity: productQuantity,            
+                        price: productPrice.innerHTML,
+                        img: productImage.outerHTML,
+                    });
+                    localStorage.setItem("shoppingList", JSON.stringify(shoppingList));
+                    return;
+                }
+            }
+        } else {{                                               // first one
+            shoppingList.push ({
+                id: productID.id,
+                name: productName.innerHTML,
+                quantity: productQuantity,            
+                price: productPrice.innerHTML,
+                img: productImage.outerHTML,
+            });
+            localStorage.setItem("shoppingList", JSON.stringify(shoppingList));
+        }};         
     })
-});    
-
-
-
+})        
+ 
