@@ -478,3 +478,86 @@ about page links
 .container a {
     color: var(--main-link-color);
 }
+
+
+/* 
+trails page route details
+*/
+
+#routeDetails {
+    font-size: 1.5rem;
+    
+
+}
+
+.text-container {
+    text-align: justify;
+    margin: 2rem 2rem;
+    padding: 2rem;
+    text-justify: inter-word;
+}
+
+#facility a {
+    text-decoration: none;
+}
+
+#route-part-container > div > img {
+    width: 100%;
+    height: 50vh;
+    object-fit: scale-down;
+}
+
+
+
+/* 
+trails page video(vdo) 
+*/
+.vdo-container {
+    width: 100%; 
+    height: 60vh; 
+    position: relative;
+    margin: 1rem auto; 
+    
+    
+}
+
+.vdo-container video { 
+    width: 60%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    left: 20%;
+    
+}
+
+@media (max-width: 1399px) {
+    .vdo-container {
+        height: 55vh;
+    }    
+}
+
+@media (max-width: 1199px) {
+    .vdo-container {
+        height: 50vh;
+    }    
+}
+
+@media (max-width: 991px) {
+    .vdo-container {
+        height: 45vh;
+    }    
+}
+
+@media (max-width: 768px) {
+    .vdo-container {
+        height: 40vh;
+    }    
+}
+
+@media (max-width: 575px) {
+    .vdo-container {
+        height: 35vh;
+    }    
+}
+
+
