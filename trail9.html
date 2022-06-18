@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="author" content="Evan Cheung, Wilson Wong">
+    <meta name="description" content="Hiking Project">
+    <meta name="keyword" content="Hiking"> 
+    <meta name="robots" content="index, follow">   
+    
+    <link rel="shortcut icon" href="./src/img/navbar_logo.svg" type="image/png">  
+    <title> Hiking - 本土高原 </title>  
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-light sticky-top"> 
+        <div class="container-fluid">
+            <a href="./index.html" class="navbar-brand ms-2" title="Hiking">
+                <img src="./src/img/navbar_logo.svg"></img>             
+            </a>
+    
+            <button class="navbar-toggler mb-2 me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse ms-auto" id="navbarToggler">
+                <ul class="navbar-nav mx-auto me-4">
+    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="./trail1.html" > Trails</a>
+    
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./trail1.html"> 西貢之巔 </a></li>
+                            <li><a class="dropdown-item" href="./trail8.html"> 港景峰 </a></li>
+                            <li><a class="dropdown-item" href="./trail9.html"> 本土高原 </a></li>
+                                                        <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="./trail2.html"> 古道之行</a></li>
+                            <li><a class="dropdown-item" href="./trail3.html"> 壁畫村</a></li>
+                            <li><a class="dropdown-item" href="./trail4.html"> 地心探險</a></li>
+                            <li><a class="dropdown-item" href="./trail5.html"> 邊境之旅</a></li>
+                            <li><a class="dropdown-item" href="./trail6.html"> 東北村落</a></li>
+                            <li><a class="dropdown-item" href="./trail7.html"> 天水圍城</a></li>
+                        </ul>
+                    </li>                
+                                     
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about.html"> About </a>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contact.html"> Contact </a>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link" href="./shop.html"> Shop </a>
+                    </li>  
+    
+                    <li class="nav-item">
+                        <a class="nav-link" href="./shopping-cart.html">
+                            <i class="shopping-cart-button bi bi-cart-fill"></i> 
+                            <span class="shopping-cart-number badge rounded-pill bg-danger"> 0 </span>               
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>     
+    </nav>
+    
+
+
+    <h2 class="display-5 text-center mt-4"> 本土高原 / 馬鞍山昂平 </h2> 
+    
+    
+    <div class="container d-flex justify-content-end col-3 text-muted mb-4">
+        <span id="updateDate">update @ 2022 June 18</span>
+    </div>
+    
+
+    <div id="routeDetails">
+
+        <div id="routeSimpfiedDetails">
+            <div class="container d-flex flex-column justify-content-between col-7">
+                <div id="climbHeight">
+                    <span>標高:&ensp; 449米 </span> 
+                </div>
+
+                <div id="climbDifficulty">
+                    <span>難易度評分:&nbsp; 3 / 10 </span> 
+                </div>
+
+                <div id="climbView">
+                    <span>路線長度:&nbsp; 11.5 公里 </span> 
+                </div>
+
+                <div id="climbTime">
+                    <span>預計需時:&ensp; 約 5 小時 </span>
+                </div>
+
+                <div id="facility">
+                    <span>設施 / 補給點: &ensp; <a href="#routeMap">鞍山探索館</a> </span> 
+                    <img></img>
+                    <img></img>
+                    <img></img>
+                </div>
+            </div>
+        </div>
+
+
+<!-- no video for this trail 
+        <div class="vdo-container">
+            <div id="routeVideo">
+                <video
+                    src="./src/video/T02_route.mp4"
+                    id="routeVideo"
+                    preload autoplay muted loop controls>
+                </video>
+
+                
+            </div>
+        </div> -->
+        <div id="routeCarousel" class="carousel slide carousel-fade mt-5" data-bs-ride="carousel">
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+                <li data-bs-target="#routeCarousel" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#routeCarousel" data-bs-slide-to="1"></li>
+                <li data-bs-target="#routeCarousel" data-bs-slide-to="2"></li>
+                <li data-bs-target="#routeCarousel" data-bs-slide-to="3"></li>
+                <li data-bs-target="#routeCarousel" data-bs-slide-to="4"></li>
+                <li data-bs-target="#routeCarousel" data-bs-slide-to="5"></li>
+                <li data-bs-target="#routeCarousel" data-bs-slide-to="6"></li>
+            </ul>
+            
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-50 m-auto" src="./src/img/T13_MOS/M003_002.jpg" alt="routePhoto1">
+                    <div class="carousel-caption">
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-50 m-auto" src="./src/img/T13_MOS/M003_007.jpg" alt="routePhoto2">
+                    <div class="carousel-caption text-dark">
+                        <h3 class="fw-bold"></h3>
+                        <p class="fw-bold"></p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-50 m-auto" src="./src/img/T13_MOS/M003_008.JPG" alt="routePhoto3">
+                    <div class="carousel-caption text-dark">
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-50 m-auto" src="./src/img/T13_MOS/M009_008.jpg" alt="routePhoto4">
+                    <div class="carousel-caption text-dark">
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-50 m-auto" src="./src/img/T13_MOS/M009_012.jpg" alt="routePhoto5">
+                    <div class="carousel-caption text-dark">
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-50 m-auto" src="./src/img/T13_MOS/M012_007.jpg" alt="routePhoto6">
+                    <div class="carousel-caption text-dark">
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-50 m-auto" src="./src/img/T13_MOS/M012_006.jpg" alt="routePhoto7">
+                    <div class="carousel-caption text-dark">
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Left and right controls -->
+            <button class="carousel-control-prev" href="#routeCarousel" data-bs-slide="prev" type="button">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="sr-only">Previous</span>
+            </button>
+            <button class="carousel-control-next" href="#routeCarousel" data-bs-slide="next" type="button">
+                <span class="carousel-control-next-icon"></span>
+                <span class="sr-only">Next</span>
+            </button>
+        </div>
+
+
+        <div id="route-text-container" class="m-5">
+            <div class="container">
+                <p>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;這段是馬鞍山郊遊徑，不過後段選取經茅坪到梅子林。路程雖然比較長，但是斜度亦因而減少。昂平是香港難得的高原，景觀一流，還有機會遇到滑翔傘運動。<br><br>
+
+                    &emsp;&emsp;&emsp;&emsp;&emsp;難度方面，絶對是郊遊級別。<br><br>
+
+                    &emsp;&emsp;&emsp;&emsp;&emsp;從馬鞍山燒烤場起步，先經樹林研習徑，看一看對岸風光。再經馬路直達２４０礦洞口參觀。<br><br>
+                    
+                    &emsp;&emsp;&emsp;&emsp;&emsp;走進馬鞍山村內的鞍山探索館，既可吸收正確的歷史養分，亦能在室內稍息。這兒面向馬鞍山及露天礦場的山脊，我又可以跟學弟妹話當年。環顧四周被眾山圍繞，望不到海岸及城市，晚上必然星光燦爛。館內有個240礦洞的大型擺設，亦不時見到240礦洞的壁畫及圖案。
+                    <br><br>
+                    
+                    &emsp;&emsp;&emsp;&emsp;&emsp;露天礦場進發，不消數分鐘，就豁然開朗。綠蔭蓋在層層赤紅的崖壁上，地上也有閃爍的石頭，走到盡頭更可以看到大埔吐露。<br><br>
+
+                    &emsp;&emsp;&emsp;&emsp;&emsp;走到最高點，看看石壟仔山頭的奇石及一覽四周無遮擋的美景。樂見這路段已經在又跣又斜的泥地上舖上石塊，而非常見的石屎梯級。<br><br>
+                    
+                    &emsp;&emsp;&emsp;&emsp;&emsp;近至西貢全景，極目至港島區的柏架山都可辨認。取道麥理浩徑，直達茅坪尋找藤王。它的生命力令人驚嘆，看著它依附的建築物，推測它其實樹齡應該不長，至多不會過半百，何以能夠如此粗碩，向外延伸達數十米？<br><br>
+
+                    &emsp;&emsp;&emsp;&emsp;&emsp;走在梅北古道的石蹬上，途中路過幾處支流，都發覺水質清澈，更有一道三米高的窄瀑就在路旁，不再是旱季時的涓涓流水，而是剛勁有力地衝擊地面。<br><br>
+
+                    &emsp;&emsp;&emsp;&emsp;&emsp;梅北古道末段又能遙遙多看一回對岸，就可以走回大水坑的馬路上。<br><br>
+                    
+                </p>
+            </div>
+        </div>
+
+
+        <div id="route-part-container" class="row d-flex flex-row justify-content-between mt-5">
+        
+            <div class="container-fluid text-center col-lg-6 col-sm-12 col-md-6">
+                <h4>分段路線:</h4><br>
+
+                <p>馬鞍山燒烤場</p>
+                <p>礦洞</p>
+                <p>石壟仔石林(449米)</p>
+                <p>- - - - - - - - - - - - - -</p>
+                <p>昂平</p>
+                <p>- - - - - - - - - - - - - -</p>
+                <p>茅坪</p>
+                <p>梅子林</p>
+            
+            </div> 
+
+            <div class="container-fluid align-self-center col-lg-6 col-sm-12 col-md-6">
+                <img id="routeMap" class="" src="./src/img/T13_MOS/T13_map.png" alt="Route-map">
+            </div>
+            
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+    <footer class="text-center text-muted">
+        <hr>
+        <div class="footer-copy-right">
+            Copyright © 2022 Wilson Wong All rights reserved.
+        </div>
+
+        <div class="footer-legal">
+            <a href="#" class="text-muted">
+                <span>Privacy Policy</span>
+                <span>Terms of Use</span>
+                <span>Sales and Refunds</span>
+                <span>Legal</span>
+                <span>Site Map</span>
+            </a>            
+        </div>       
+    </footer>
+
+    <div class="bottom-box sticky-bottom">
+        <a href="#" title="Back to Top">
+            <i class="back-to-top bi bi-arrow-up-circle"></i>
+        </a>
+    </div>
+
+
+
+    <script src="https://kit.fontawesome.com/0f247ccc67.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="./js/shop.js"></script>
+</body>
+</html>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="author" content="Evan Cheung, Wilson Wong">
+    <meta name="description" content="Hiking Project">
+    <meta name="keyword" content="Hiking"> 
+    <meta name="robots" content="index, follow">   
+    
+    <link rel="shortcut icon" href="./src/img/navbar_logo.svg" type="image/png">  
+    <title> Cycling - 壁畫村 </title>  
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-light sticky-top"> 
+        <div class="container-fluid">
+            <a href="./index.html" class="navbar-brand ms-2" title="Hiking">
+                <img src="./src/img/navbar_logo.svg"></img>             
+            </a>
+    
+            <button class="navbar-toggler mb-2 me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse ms-auto" id="navbarToggler">
+                <ul class="navbar-nav mx-auto me-4">
+    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="./trail1.html" > Trails</a>
+    
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./trail1.html"> 西貢之巔 </a></li>
+                            <li><a class="dropdown-item" href="./trail8.html"> 港景峰 </a></li>
+                            <li><a class="dropdown-item" href="./trail9.html"> 本土高原 </a></li>
+                                                        <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="./trail2.html"> 古道之行</a></li>
+                            <li><a class="dropdown-item" href="./trail3.html"> 壁畫村</a></li>
+                            <li><a class="dropdown-item" href="./trail4.html"> 地心探險</a></li>
+                            <li><a class="dropdown-item" href="./trail5.html"> 邊境之旅</a></li>
+                            <li><a class="dropdown-item" href="./trail6.html"> 東北村落</a></li>
+                            <li><a class="dropdown-item" href="./trail7.html"> 天水圍城</a></li>
+                        </ul>
+                    </li>                
+                                     
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about.html"> About </a>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contact.html"> Contact </a>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link" href="./shop.html"> Shop </a>
+                    </li>  
+    
+                    <li class="nav-item">
+                        <a class="nav-link" href="./shopping-cart.html">
+                            <i class="shopping-cart-button bi bi-cart-fill"></i> 
+                            <span class="shopping-cart-number badge rounded-pill bg-danger"> 0 </span>               
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>     
+    </nav>
+    
+
+
+    <h2 class="display-5 text-center mt-4"> 壁畫村 / 坪輋打鼓嶺 </h2> 
+    
+    
+    <div class="container d-flex justify-content-end col-3 text-muted mb-4">
+        <span id="updateDate">update @ 2022 June 18</span>
+    </div>
+    
+
+    <div id="routeDetails">
+
+        <div id="routeSimpfiedDetails">
+            <div class="container d-flex flex-column justify-content-between col-7">
+                <div id="climbDifficulty">
+                    <span>難易度評分:&nbsp; 3 / 10 </span> 
+                </div>
+
+                <div id="climbView">
+                    <span>路線長度:&nbsp; 23.4 公里 </span> 
+                </div>
+
+                <div id="climbTime">
+                    <span>預計需時:&ensp; 約 7 小時 </span>
+                </div>
+
+                <div id="facility">
+                    <span>設施 / 補給點: &ensp; <a href="#routeMap">坪輋 ／ 坪洋: 士多</a> </span> 
+                    <img></img>
+                    <img></img>
+                    <img></img>
+                </div>
+            </div>
+        </div>
+
+
+
+            <div class="vdo-container">
+            <div id="routeVideo">
+                <video
+                    src="./src/video/T03_route.mp4"
+                    id="routeVideo"
+                    preload autoplay muted loop controls>
+                </video>
+
+                
+            </div>
+        </div>
+
+
+        <div id="route-text-container" class="m-5">
+            <div class="container">
+                <p>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;這次旅程全長23公里，故此建議從上水租單車遊歷。可以一探新界五大氏族圍村，及其他客家村落。<br><br>
+
+                    &emsp;&emsp;&emsp;&emsp;&emsp;難度方面，基本上都平緩好走，唯一難度是路程頗長，坪輋路一帶亦缺乏單車徑，要小心大型車輛或者輕型巴士從身旁略過。亦可以沿行人路推車前行。<br><br>
+
+                    &emsp;&emsp;&emsp;&emsp;&emsp;沿著鐵路走，在兩站的中間位置，有一個大型的北區公園，公園外就是粉嶺圍。
+                    這條村落的圍牆保存良好，門樓安穩，而且有幾尊大砲座鎮其中，可見有一定規模。
+                    村落前有一個半月型風水池塘，足足有兩個藍球場大。
+                    翻查資料，很多中國村落前方都會建設一個池塘，既有招財引氣的風水意義，又有儲水救火，蓄能納涼的實效。
+                    不過，隨著都巿化的發展，香港村落遺留至今的風水池碩果僅存。
+                    所以，這個風水池的確是彌足珍貴。<br><br>
+                    
+                    &emsp;&emsp;&emsp;&emsp;&emsp;新界鄉郊村落需要墟巿為附近鄉民提供買賣及服務，而粉嶺的墟巿就是聯和墟。
+                    它在五十年代落成，是第一代的有蓋墟巿，有戲院，巿場及百多間商舖。
+                    隨著都巿發展，部分商店被回收重建，加上廿一世紀時新街市落成，聯和墟正式關閉。
+                    多年來都閒置，只有間中出租成為拍攝場景或短期活動之用。
+                    最終保育活化的計劃，遙遙無期。
+                    <br><br>
+                    
+                    &emsp;&emsp;&emsp;&emsp;&emsp;新界鄧氏不單只在元朗平原稱霸，原來亦早在梧桐河畔扎根。老圍一帶有三個圍村門樓，鐵鏤門閘，麻石城牆，各具特色。
+                    路旁就是幾塊菜田，農人在彎腰耕種，遠方正是取代聯和墟巿的新建住宅大樓，如一道屏風般的橫亙在山野之間。<br><br>
+
+                    &emsp;&emsp;&emsp;&emsp;&emsp;松嶺鄧公祠是鄧氏其中一座最重要的祠堂之一，三進二院，亦是法定古蹟。
+                    自從參觀過不同村落，不同氏族的祠堂之後，就會了解到這座祠堂的規模罕有。
+                    每次路過都巧合地見到有團練在祠堂內習武，可見這座祠堂仍然維持一定功能。
+                    祠堂前的大榕樹廣闊遮風，見證了此地的六百多年興衰。<br><br>
+                    
+                    &emsp;&emsp;&emsp;&emsp;&emsp;沙頭角公路將覲龍圍跟老圍分隔兩旁。
+                    雖然老圍群落的門樓都保存良好，但要數整體城牆及更樓的保存，就一定要到覲龍圍參觀。
+                    作為法定古蹟，它的門樓也特別開放給遊人遊覽，可以細意觀賞青磚和花崗岩石的城牆建築。<br><br>
+
+                    &emsp;&emsp;&emsp;&emsp;&emsp;穿過新圍就可以到達梧桐河畔，對岸就是保育人仕耳熟能詳的馬屎甫。
+                    曾經在大部分土地圍封之後，村民仍在苟延殘喘之時探訪，走在田中阡陌間，感受那一片城鄉交錯的風光。<br><br>
+
+                    &emsp;&emsp;&emsp;&emsp;&emsp;從沙頭角公路轉入坪輋路，有頗多小巴及大型車輛，所以不能視作合家歡安全路線。
+                    壁畫村規模不大，我估計也是只有十多間房屋漆上壁畫，內容都是以田野風光及鄉村動物為主。
+                    若跟彩虹眷村比較，面績較大但比較分散。<br><br>
+
+                    &emsp;&emsp;&emsp;&emsp;&emsp;不過，除了色彩繽紛的壁畫之外，地上亦漆有可愛的圖案，引領大家走入村中。
+                    兩旁亦有不少舊物重用的藝術裝置，去修飾欄柵及用作風車，風鈴之用，活像走進漫畫世界。走到一間木屋前面，有一片空地，設置了一張長几及兩排木凳，旁邊還有一台雪櫃。
+                    原來有心人擺放了心意卡，讓遊人書寫當中感受，再投進這個由雪櫃偽裝而成的郵箱。
+                    摯友寫下希望永留這片淨土給後世的願望；可惜不知推土機最終會何時降臨。<br><br>
+                    
+                    &emsp;&emsp;&emsp;&emsp;&emsp;從高處可以眺望整個處於內陸深處的打鼓嶺平原，如何受到幅射冷卻的影響，令它成為香港極寒極熱之地。
+                    打鼓嶺堆填區其實就在眼前，重型車輛繁忙地卸下廢物，就像人類一刀一刀地割在地球身上，再披上醜陋的藍色防水膜去掩飾。<br><br>
+
+                    &emsp;&emsp;&emsp;&emsp;&emsp;再向禾徑山方向踩，會路過幾間小屋。
+                    屋旁就有幾棵百年樟樹，可是傳聞因為有電視台的工作人員拍攝時破壞樹枝，所以現在被村民圍封了。
+                    有時在郊野也會看到一些明顯是娛樂拍攝遺留的廢物，心中亦會詛咒這些害群之馬，令到很多美好的地方，再不能讓世人分享。初段的禾徑山路，不禁令人聯想到從台灣學會的詞彙：綠色隧道。因為兩旁高聳的樟樹綠蔭，像綠色巨人把他的雙手合攏，形成一條隧道一樣。<br><br>
+
+                    &emsp;&emsp;&emsp;&emsp;&emsp;從禾徑山回到沙頭角公路，會經過一處名為軍地的村落。因為它背靠皇后山軍營，面對新圍軍營。再向龍躍頭方向前進，會途經一間本地醬油廠。
+                    每次經過都會被那些帶上竹笠的醬油缸吸引，停下來細賞一番。
+                    現在都會著意選用本地手作醬油，希望能夠支持本土風味，能夠傳承下去。<br><br>
+
+                    &emsp;&emsp;&emsp;&emsp;&emsp;不遠處，就會接回龍躍頭古蹟徑。或者再沿著沙頭角公路直走，就可以回到粉嶺馬屎甫和聯和墟，回歸文明之地。<br><br>
+
+                </p>
+            </div>
+        </div>
+
+
+
+        <div id="routeCarousel" class="carousel slide carousel-fade mt-5" data-bs-ride="carousel">
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+                <li data-bs-target="#routeCarousel" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#routeCarousel" data-bs-slide-to="1"></li>
+                <li data-bs-target="#routeCarousel" data-bs-slide-to="2"></li>
+                <li data-bs-target="#routeCarousel" data-bs-slide-to="3"></li>
+                <li data-bs-target="#routeCarousel" data-bs-slide-to="4"></li>
+                <li data-bs-target="#routeCarousel" data-bs-slide-to="5"></li>
+                <li data-bs-target="#routeCarousel" data-bs-slide-to="6"></li>
+                <li data-bs-target="#routeCarousel" data-bs-slide-to="7"></li>
+                <li data-bs-target="#routeCarousel" data-bs-slide-to="8"></li>
+                <li data-bs-target="#routeCarousel" data-bs-slide-to="9"></li>
+            </ul>
+            
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-50 m-auto" src="./src/img/T03_Ping_Che/M041_001x.jpg" alt="routePhoto1">
+                    <div class="carousel-caption">
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-50 m-auto" src="./src/img/T03_Ping_Che/M041_001z.jpg" alt="routePhoto2">
+                    <div class="carousel-caption text-dark">
+                        <h3 class="fw-bold"></h3>
+                        <p class="fw-bold"></p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-50 m-auto" src="./src/img/T03_Ping_Che/M041_003.jpg" alt="routePhoto3">
+                    <div class="carousel-caption text-dark">
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-50 m-auto" src="./src/img/T03_Ping_Che/M041_011a.jpg" alt="routePhoto4">
+                    <div class="carousel-caption text-dark">
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-50 m-auto" src="./src/img/T03_Ping_Che/M041_014a.jpg" alt="routePhoto5">
+                    <div class="carousel-caption text-dark">
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-50 m-auto" src="./src/img/T03_Ping_Che/M041_018a.jpg" alt="routePhoto6">
+                    <div class="carousel-caption text-dark">
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-50 m-auto" src="./src/img/T03_Ping_Che/M041_019a.jpg" alt="routePhoto7">
+                    <div class="carousel-caption text-dark">
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-50 m-auto" src="./src/img/T03_Ping_Che/M041_021a.jpg" alt="routePhoto8">
+                    <div class="carousel-caption text-dark">
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-50 m-auto" src="./src/img/T03_Ping_Che/M041_022a.jpg" alt="routePhoto9">
+                    <div class="carousel-caption text-dark">
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Left and right controls -->
+            <button class="carousel-control-prev" href="#routeCarousel" data-bs-slide="prev" type="button">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="sr-only">Previous</span>
+            </button>
+            <button class="carousel-control-next" href="#routeCarousel" data-bs-slide="next" type="button">
+                <span class="carousel-control-next-icon"></span>
+                <span class="sr-only">Next</span>
+            </button>
+        </div>
+       
+
+
+        <div id="route-part-container" class="row d-flex flex-row justify-content-between mt-5">
+        
+            <div class="container-fluid text-center col-lg-6 col-sm-12 col-md-6">
+                <h4>分段路線:</h4><br>
+
+                <p>上水單車匯合處</p>
+                <p>粉嶺圍</p>
+                <p>聯和墟</p>
+                <p>- - - - - - - - - - - - - -</p>
+                <p>龍躍頭</p>
+                <p>馬屎甫</p>
+                <p>- - - - - - - - - - - - - -</p>
+                <p>坪輋壁畫村</p>
+                <p>坪洋村</p>
+                <p>- - - - - - - - - - - - - -</p>
+                <p>禾徑山</p>
+                <p>軍地</p>
+                <p>上水單車匯合處</p>
+            
+            </div> 
+
+            <div class="container-fluid align-self-center col-lg-6 col-sm-12 col-md-6">
+                <img id="routeMap" class="" src="./src/img/T03_Ping_Che/T05_map_1.png" alt="Route-map">
+            </div>
+            
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+    <footer class="text-center text-muted">
+        <hr>
+        <div class="footer-copy-right">
+            Copyright © 2022 Wilson Wong All rights reserved.
+        </div>
+
+        <div class="footer-legal">
+            <a href="#" class="text-muted">
+                <span>Privacy Policy</span>
+                <span>Terms of Use</span>
+                <span>Sales and Refunds</span>
+                <span>Legal</span>
+                <span>Site Map</span>
+            </a>            
+        </div>       
+    </footer>
+
+    <div class="bottom-box sticky-bottom">
+        <a href="#" title="Back to Top">
+            <i class="back-to-top bi bi-arrow-up-circle"></i>
+        </a>
+    </div>
+
+
+
+    <script src="https://kit.fontawesome.com/0f247ccc67.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="./js/shop.js"></script>
+</body>
+</html>
