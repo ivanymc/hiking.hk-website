@@ -9,6 +9,7 @@
     --chatbox-othermsg-color: rgb(124, 124, 124);
     --chatbox-selfmsg-color: #9DB541;
     --shopping-cart-title-color: #f5f5f5;
+    --shop-tooltip-color: #f5f5f5;
     --main: #9FD3A9;
     --set-a1: #E8E9DC;
     --set-a2: #788051;
@@ -364,6 +365,47 @@ video {
     font-size: 1.1rem;
     font-style: oblique;
 }
+
+.add-to-shopping-cart {
+    position: relative;
+}
+
+
+/*
+    Shop tooltip
+*/
+.marketplace-tooltip {
+    position: absolute;
+    display: none;
+    width: 124px;
+    height: 55px;    
+    bottom: 61px;
+    left: 380px;
+    background: var(--shop-tooltip-color);
+    border-radius: 5px;
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,0.8);
+    padding: 5px 6px 6px 6px;
+}
+
+.marketplace-tooltip:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+    border: 6px solid black;
+    border-color: transparent transparent var(--shop-tooltip-color) var(--shop-tooltip-color);
+    transform-origin: 0 0;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    box-shadow: -3px 2px 3px 0 rgba(0, 0, 0, 0.3);
+    margin: auto;
+}
+
 
 /*
     Shopping Cart
