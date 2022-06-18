@@ -366,21 +366,21 @@ video {
     font-style: oblique;
 }
 
-.add-to-shopping-cart {
-    position: relative;
-}
-
 
 /*
     Shop tooltip
 */
+.buy-button-col {
+    position: relative;
+}
+
 .marketplace-tooltip {
     position: absolute;
     display: none;
     width: 124px;
     height: 55px;    
-    bottom: 61px;
-    left: 380px;
+    bottom: 50px;
+    left: 54px;
     background: var(--shop-tooltip-color);
     border-radius: 5px;
     box-shadow: 0 1px 5px 0 rgba(0,0,0,0.8);

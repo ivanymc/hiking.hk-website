@@ -32,7 +32,7 @@ Array.from(ADD_TO_SHOPPING_CART_BUTTON).forEach( button => {
             setTimeout( () => {
                 tooltip.style.display = "none"
             }, 2000)       
-        
+
         // Count how many product added, and show in the cart number
         SHOPPING_CART_NUMBER.innerHTML = parseInt(SHOPPING_CART_NUMBER.innerHTML) + 1;
 
