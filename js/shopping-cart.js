@@ -44,10 +44,14 @@ function displayTotalPrice() {
 };
 
 
-
 // create htmlel, insert and save to local storage
 let shoppingList_htmlel = [ ];
 const SHOPPING_CART_LIST = document.querySelector('.shopping-cart-list');
+
+//remove .shopping-cart-list-msg-before-any-items
+if (cartTotalNumber.length > 0) {
+    SHOPPING_CART_LIST.innerHTML = "";  
+}   
 
 for (let i = 0; i < shoppingList.length; i++) {
     shoppingList_htmlel.push(`<div id="${shoppingList[i].id}" class="shopping-cart-items row">
@@ -73,7 +77,6 @@ for (let i = 0; i < shoppingList.length; i++) {
                             </div>
                         </div>`);
 
-    SHOPPING_CART_LIST.innerHTML = ""; //remove .shopping-cart-list-msg-before-any-items
     SHOPPING_CART_LIST.insertAdjacentHTML('beforeend', shoppingList_htmlel[i]);
     localStorage.setItem("shoppingList_htmlel", JSON.stringify(shoppingList_htmlel)); 
     displayItemPriceSubtotal();
