@@ -1,20 +1,27 @@
 :root {
-    --main-bg-color: #fff;
+    --main-bg-color: #FBFFF9;
     --main-text-color: #000;
     --main-btn-color: rgb(124, 124, 124);
     --main-link-color: rgb(124, 124, 124);
     --main-hover-color: #1994D7;
     --main-footer-color: rgb(124, 124, 124);
     --main-border-color: #e5e5e5;
+
+    --nav-bg-color: #FBFFF9;
+    --nav-text-color: #000;
+
     --card-bg-color: #000;
     --card-text-color: #fff;
+
     --chatbox-othermsg-color: rgb(124, 124, 124);
     --chatbox-selfmsg-color: #9DB541;
+
     --shopping-cart-title-color: #f5f5f5;
     --shop-tooltip-color: #f5f5f5;
-    --main: #9FD3A9;
-    --set-a1: #E8E9DC;
-    --set-a2: #788051;
+
+    --main: #FBFFF9;
+    --set-a1: #F9FFFA;
+    --set-a2: #F9FFFD;
     --set-b1: #9DB541;
     --set-b2: #68EDCB;
 }
@@ -31,6 +38,7 @@ html {
 
 body {
     overflow-x: hidden;
+    background: var(--main-bg-color) !important;
 }
 
 
@@ -40,6 +48,7 @@ body {
 */
 nav {
     height: 6vh;
+    background: var(--nav-bg-color) !important;
 }
 
 .navbar-brand > img {
@@ -49,7 +58,6 @@ nav {
 
 @media (max-width: 575px) {
     .navbar-nav {
-        background: var(--main-bg-color);
         margin-top: -4px;
         width: 100%;
     }
@@ -154,6 +162,7 @@ video {
 /*
     Trails Card 
 */
+
 .trails-card-col {
     margin-top: 1.5rem !important; /* override bootstrap default mt-0 */
 }
@@ -165,7 +174,7 @@ video {
 .card-img {
     display: flex;
     align-items: stretch;
-    height: 45vh !important;  /* override bootstrap different img height */
+    height: 45vh !important;  /* override bootstrap different img height */    
 }
 
 .trails-card-link {
@@ -181,7 +190,6 @@ video {
     color: var(--card-text-color);
     background-color: var(--card-bg-color);
     opacity: 0.6;
-
 }
 
 
