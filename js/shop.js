@@ -8,11 +8,9 @@ const SHOPPING_CART_NUMBER = document.querySelector(".shopping-cart-number");
 
 
 // load local storage shopping Cart Number
-let shoppingCartNumber = 0;
 let cartTotalNumber = JSON.parse(localStorage.getItem("cartTotalNumber")) || [ ];
 if (cartTotalNumber.length != 0) {
     SHOPPING_CART_NUMBER.innerHTML = JSON.parse(localStorage.getItem("cartTotalNumber")).length;
-    shoppingCartNumber = JSON.parse(localStorage.getItem("cartTotalNumber")).length;
 };
 
 let shoppingList = JSON.parse(localStorage.getItem("shoppingList")) || [ ];
@@ -27,12 +25,11 @@ Array.from(ADD_TO_SHOPPING_CART_BUTTON).forEach( button => {
         e.preventDefault();
         
         // Count how many product added, and show in the cart number
-        shoppingCartNumber++;
-        SHOPPING_CART_NUMBER.innerHTML = shoppingCartNumber;
+        SHOPPING_CART_NUMBER.innerHTML = parseInt(SHOPPING_CART_NUMBER.innerHTML) + 1;
 
         // Add the number and shopping list to local storage
         cartTotalNumber.push( { 
-            cartTotalNumber: shoppingCartNumber,
+            cartTotalNumber: SHOPPING_CART_NUMBER.innerHTML,
         } );
         localStorage.setItem("cartTotalNumber", JSON.stringify(cartTotalNumber));
 

@@ -80,7 +80,10 @@
             <div class="col-2"> 刪除 </div>       
         </div>
 
-        <div class="shopping-cart-list">   </div>
+        <div class="shopping-cart-list"> 
+        
+        </div>
+
         
 
         <div class="container-fluid mt-4">
@@ -90,8 +93,9 @@
                     <div class="order-details-title p-2 ps-4"> 訂單資訊 </div>
                     <div class="order-delivery px-3 py-1">                    
                         <div class="form-title mb-1 mt-2 ms-2"> 運送方式 </div>
-                        <select class="form-select">
-                            <option value="1"> 自取 </option>
+                        <select id="delivery-way" class="form-select">
+                            <option value="" selected hidden> 請選擇取貨方式 </option>
+                            <option value="1" > 自取 </option>
                             <option value="2"> 順豐智能櫃 </option>
                             <option value="3"> 順豐自取點 </option>
                         </select>
@@ -104,29 +108,39 @@
 
                 <div class="checkout-container col-lg-4 col-sm-12">
                     <div class="order-details-title p-2 ps-4"> 訂單價錢 </div>
-                    <table class="mt-2 ms-4">
+                    <table class="mt-2 ms-5">
                         <tbody>                      
                             <tr>
                                 <td> 產品價錢： </td>
-                                <td class="items-price-subtotal" >   8 </td>
+                                <td class="items-price-subtotal" >$ 0</td>
                             </tr>
 
                             <tr>
                                 <td> 運費： </td>
-                                <td class="delivery-fees-subtotal" >   8 </td>
+                                <td class="delivery-fees-subtotal" >$ 0</td>
                             </tr>
 
                             <tr>
                                 <td> 折扣： </td>
-                                <td class="items-discount-subtotal" >   8</td>
+                                <td class="items-discount-subtotal" >- $ 0</td>
                             </tr>
 
                             <tr>
                                 <td> 合共： </td>
-                                <td class="items-price-total" >   8</td>
+                                <td class="items-price-total" >$ 0</td>
                             </tr>
                         </tbody> 
                     </table>
+
+                    <div class="checkout-button-div mt-1 ms-5">
+                        <button class="checkout-button btn btn-success" type="button"> Submit </button>
+
+                    </div>
+
+
+
+
+
                 </div>
             </div>
         </div>
