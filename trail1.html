@@ -19,49 +19,49 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-sm bg-light sticky-top"> 
+    <nav class="navbar navbar-expand-sm sticky-top"> 
         <div class="container-fluid">
             <a href="./index.html" class="navbar-brand ms-2" title="Hiking">
                 <img src="./src/img/navbar_logo.svg"></img>             
             </a>
-    
+
             <button class="navbar-toggler mb-2 me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler">
                 <span class="navbar-toggler-icon"></span>
             </button>
-    
+
             <div class="collapse navbar-collapse ms-auto" id="navbarToggler">
                 <ul class="navbar-nav mx-auto me-4">
-    
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="./trail1.html" > Trails</a>
-    
+
+                    <li class="nav-item dropdown px-2">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="./trails.html" > Trails</a>
+
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="./trail1.html"> 西貢之巔 </a></li>
-                            <li><a class="dropdown-item" href="./trail8.html"> 港景峰 </a></li>
-                            <li><a class="dropdown-item" href="./trail9.html"> 本土高原 </a></li>
+                            <li><a class="dropdown-item" href="trail1.html"> 西貢之巔 </a></li>
+                            <li><a class="dropdown-item" href="#"> 港景峰 </a></li>
+                            <li><a class="dropdown-item" href="#"> 本土高原 </a></li>
                                                         <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="./trail2.html"> 古道之行</a></li>
-                            <li><a class="dropdown-item" href="./trail3.html"> 壁畫村</a></li>
-                            <li><a class="dropdown-item" href="./trail4.html"> 地心探險</a></li>
-                            <li><a class="dropdown-item" href="./trail5.html"> 邊境之旅</a></li>
-                            <li><a class="dropdown-item" href="./trail6.html"> 東北村落</a></li>
-                            <li><a class="dropdown-item" href="./trail7.html"> 天水圍城</a></li>
+                            <li><a class="dropdown-item" href="trail2.html"> 古道之行</a></li>
+                            <li><a class="dropdown-item" href="#"> 壁畫村</a></li>
+                            <li><a class="dropdown-item" href="#"> 地心探險</a></li>
+                            <li><a class="dropdown-item" href="#"> 邊境之旅</a></li>
+                            <li><a class="dropdown-item" href="#"> 東北村落</a></li>
+                            <li><a class="dropdown-item" href="#"> 天水圍城</a></li>
                         </ul>
                     </li>                
                                      
-                    <li class="nav-item">
+                    <li class="nav-item px-2">
                         <a class="nav-link" href="./about.html"> About </a>
                     </li>
-    
-                    <li class="nav-item">
+
+                    <li class="nav-item px-2">
                         <a class="nav-link" href="./contact.html"> Contact </a>
                     </li>
-    
-                    <li class="nav-item">
+
+                    <li class="nav-item px-2">
                         <a class="nav-link" href="./shop.html"> Shop </a>
                     </li>  
-    
-                    <li class="nav-item">
+
+                    <li class="nav-item px-2">
                         <a class="nav-link" href="./shopping-cart.html">
                             <i class="shopping-cart-button bi bi-cart-fill"></i> 
                             <span class="shopping-cart-number badge rounded-pill bg-danger"> 0 </span>               
@@ -70,9 +70,7 @@
                 </ul>
             </div>
         </div>     
-    </nav>
-    
-
+    </nav>    
 
     <h2 class="display-5 text-center mt-4"> 西貢之巔 / 石屋山 </h2> 
     
@@ -268,13 +266,29 @@
     <div class="bottom-box sticky-bottom">
         <a href="#" title="Back to Top">
             <i class="back-to-top bi bi-arrow-up-circle"></i>
-        </a>
+        </a>          
+        <i class="chat-box-button bi bi-chat-text" title="Click to Chat"></i>
+
+        <div class="chat-box">
+            <div class="chat-box-title">Customer Service — Ivan </div>
+
+            <div class="chat-box-uppergrid">            
+                <div class="chat-box-other-messages"> 
+                    Hello, I am Ivan. What can I help you?
+                </div>              
+            </div>
+
+            <form class="chat-box-lowergrid">  
+                    <input class="chat-box-input" type="text" placeholder="Type message... " required>                
+            </form>
+        </div>
     </div>
 
 
 
     <script src="https://kit.fontawesome.com/0f247ccc67.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="./js/chatbox.js"></script>
     <script src="./js/shop.js"></script>
 </body>
 </html>
