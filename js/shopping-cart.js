@@ -73,6 +73,7 @@ for (let i = 0; i < shoppingList.length; i++) {
                             </div>
                         </div>`);
 
+    SHOPPING_CART_LIST.innerHTML = ""; //remove .shopping-cart-list-msg-before-any-items
     SHOPPING_CART_LIST.insertAdjacentHTML('beforeend', shoppingList_htmlel[i]);
     localStorage.setItem("shoppingList_htmlel", JSON.stringify(shoppingList_htmlel)); 
     displayItemPriceSubtotal();

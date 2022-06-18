@@ -394,6 +394,12 @@ video {
     border: 1px solid var(--main-border-color);
 }
 
+.shopping-cart-list-msg-before-any-items {
+    font-size: 2rem;
+    text-align: center;
+    padding: 100px;
+}
+
 .shopping-cart-image > .shop-items-img {
     height: 15vh;
 }
