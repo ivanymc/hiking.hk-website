@@ -6,6 +6,8 @@
 const ADD_TO_SHOPPING_CART_BUTTON = document.querySelectorAll('.add-to-shopping-cart');
 const SHOPPING_CART_NUMBER = document.querySelector(".shopping-cart-number");
 
+const MARKETPLACE_TOOLTIP = document.querySelectorAll('.marketplace-tooltip');
+
 
 // load local storage shopping Cart Number
 let cartTotalNumber = JSON.parse(localStorage.getItem("cartTotalNumber")) || [ ];
@@ -23,6 +25,13 @@ let shoppingList = JSON.parse(localStorage.getItem("shoppingList")) || [ ];
 Array.from(ADD_TO_SHOPPING_CART_BUTTON).forEach( button => {
     button.addEventListener('click', e => {
         e.preventDefault();
+
+        let tooltip = e.target.nextElementSibling;
+        console.log(tooltip);
+        tooltip.style.display = "block";
+            setTimeout( () => {
+                tooltip.style.display = "none"
+            }, 2000)       
         
         // Count how many product added, and show in the cart number
         SHOPPING_CART_NUMBER.innerHTML = parseInt(SHOPPING_CART_NUMBER.innerHTML) + 1;

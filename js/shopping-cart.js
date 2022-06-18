@@ -5,43 +5,12 @@
 // load shopping list local storage already declared in shop.js
 // put shop.js script in shopping-cart.html
 
-
 // Display items subtotal
 const ITEM_PRICE_SUBTOTAL = document.querySelector('.items-price-subtotal');
 const DELIVERY_FEES_SUBTOTAL = document.querySelector('.delivery-fees-subtotal');
 const ITEM_DISCOUNT_SUBTOTAL = document.querySelector('.items-discount-subtotal');
 const ITEM_PRICE_TOTAL = document.querySelector('.items-price-total');
 const DELIVERY_WAY = document.querySelector('#delivery-way');
-
-// Display Item Price
-function displayItemPriceSubtotal() {
-    let itemsPriceSubtotal = [ ];
-    for (let i = 0; i < shoppingList.length; i++ ) {
-        itemsPriceSubtotal.push(shoppingList[i].quantity * shoppingList[i].price);      
-    }
-
-    ITEM_PRICE_SUBTOTAL.innerHTML = "$ " + itemsPriceSubtotal.reduce( (a, b) => a + b, 0);
-};
-
-// Display Delivery Fee
-DELIVERY_WAY.addEventListener('change', function() {
-    if (this.value == "1") {
-        DELIVERY_FEES_SUBTOTAL.innerHTML = "$ " + 0;
-    } else if (this.value == "2") {
-        DELIVERY_FEES_SUBTOTAL.innerHTML = "$ " + 20;
-    } else if (this.value == "3") {
-        DELIVERY_FEES_SUBTOTAL.innerHTML = "$ " + 40;
-    }
-    displayTotalPrice();
-});
-
-// Display Total Price
-function displayTotalPrice() {    
-    // remove "$" and change from string to number
-    ITEM_PRICE_TOTAL.innerHTML = "$ "
-                                + ( parseInt(ITEM_PRICE_SUBTOTAL.innerHTML.substring(2))
-                                + parseInt(DELIVERY_FEES_SUBTOTAL.innerHTML.substring(2)) );
-};
 
 
 // create htmlel, insert and save to local storage
@@ -192,6 +161,37 @@ Array.from(SHOPPING_CART_DELETE_BUTTON).forEach( button => {
     }
     })
 });
+
+
+// Display Item Price
+function displayItemPriceSubtotal() {
+    let itemsPriceSubtotal = [ ];
+    for (let i = 0; i < shoppingList.length; i++ ) {
+        itemsPriceSubtotal.push(shoppingList[i].quantity * shoppingList[i].price);      
+    }
+
+    ITEM_PRICE_SUBTOTAL.innerHTML = "$ " + itemsPriceSubtotal.reduce( (a, b) => a + b, 0);
+};
+
+// Display Delivery Fee
+DELIVERY_WAY.addEventListener('change', function() {
+    if (this.value == "1") {
+        DELIVERY_FEES_SUBTOTAL.innerHTML = "$ " + 0;
+    } else if (this.value == "2") {
+        DELIVERY_FEES_SUBTOTAL.innerHTML = "$ " + 20;
+    } else if (this.value == "3") {
+        DELIVERY_FEES_SUBTOTAL.innerHTML = "$ " + 40;
+    }
+    displayTotalPrice();
+});
+
+// Display Total Price
+function displayTotalPrice() {    
+    // remove "$" and change from string to number
+    ITEM_PRICE_TOTAL.innerHTML = "$ "
+                                + ( parseInt(ITEM_PRICE_SUBTOTAL.innerHTML.substring(2))
+                                + parseInt(DELIVERY_FEES_SUBTOTAL.innerHTML.substring(2)) );
+};
 
 
 // Submit button
