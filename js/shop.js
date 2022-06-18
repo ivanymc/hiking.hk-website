@@ -25,14 +25,14 @@ let shoppingList = JSON.parse(localStorage.getItem("shoppingList")) || [ ];
 Array.from(ADD_TO_SHOPPING_CART_BUTTON).forEach( button => {
     button.addEventListener('click', e => {
         e.preventDefault();
-
+/*
         // tooltip 
         let tooltip = e.target.nextElementSibling;
         tooltip.style.display = "block";
             setTimeout( () => {
                 tooltip.style.display = "none"
             }, 2000)       
-        
+        */
         // Count how many product added, and show in the cart number
         SHOPPING_CART_NUMBER.innerHTML = parseInt(SHOPPING_CART_NUMBER.innerHTML) + 1;
 
