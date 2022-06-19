@@ -31,18 +31,18 @@ for (let i = 0; i < shoppingList.length; i++) {
                                 ${shoppingList[i].name}
                             </div>
                             <div class="shopping-cart-quantity col">
-                                <button type="button" class="buy-minus-button btn btn-secondary"> - </button>
+                                <button type="button" class="buy-minus-button btn btn-secondary ms-3"> - </button>
                                 <span class="buy-number form-control w-25 mx-1"> 
                                     ${shoppingList[i].quantity}
                                 </span>
                                 <button type="button" class="buy-add-button btn btn-secondary"> + </button>
                             </div>
                             <div class="shopping-cart-price col ps-4">
-                            <span class="dollor-sign">$ </span>
+                            <span class="dollor-sign ms-2">$ </span>
                                 ${shoppingList[i].price} 
                             </div>
                             <div class="shopping-cart-delete col-2 ps-4">
-                                <i class="shopping-cart-delete-button bi bi-trash3"></i>
+                                <i class="shopping-cart-delete-button bi bi-trash3 ms-1"></i>
                             </div>
                         </div>`);
 

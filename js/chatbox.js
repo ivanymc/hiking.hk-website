@@ -19,6 +19,19 @@ CHAT_BOX_BUTTON.addEventListener('click', e => {
 
 
 /*
+    Appear back to top when scrolling down
+*/
+const BOTTOM_BOX_BUTTON = document.querySelector(".bottom-box");
+window.addEventListener('scroll', () => {
+    if(window.scrollY > 10) {
+        BOTTOM_BOX_BUTTON.classList.add('active');
+    } else {
+        BOTTOM_BOX_BUTTON.classList.remove('active');
+    }
+});
+
+
+/*
     Chat Box input - self messages
     Other Messages
 */
@@ -28,38 +41,34 @@ const CHAT_BOX = document.querySelector(".chat-box");
 
 // https://blog.techbridge.cc/2016/07/02/ChatBot-with-Wit/
 
+// typing MSG = 2000ms
 
-/*
+let fakeMessagesArray = [
+    ` Hello, I am Ivan. What can I help you? `,
+    ` Sorry, What do you mean? `,
+    ` Sorry, I don't understand. `,
+    ` Thanks for your enquiry, please wait for a moment. `,
+    ` What can I assist you with? `,
+    ` How may I be of service? `,
+    ` What can I do for you? `,
+
+]
+
 // Opening Message
-CHAT_BOX.addEventListener('visibilitychange', e => {
-    if(document.visibilityState === 'visible') {
+CHAT_BOX_BUTTON.addEventListener('click', e => {
+    if(CHAT_BOX.style.display === 'flex') {
         setTimeout( () => {
+            typingMessages();
+        }, 1000)        
+
+        setTimeout( () => {            
             let text = `<div class="chat-box-other-messages"> 
                             ${fakeMessagesArray[0]} 
                         </div>`;
             displayText(text);
-        }, 1)
+        }, 3100)
     }
 })
-
-/*
-function openingMessage() {
-    let text = 
-    displayText(text);
-
-    if (CHAT_BOX_INPUT.value) {
-        text = `<div class="chat-box-other-messages"> 
-        Hello, ${CHAT_BOX_INPUT.value}. What can I help you?
-    </div>`;
-    displayText(text);
-    }
-    
-let fakeMessagesArray = [
-    " Hello, I am Ivan. What's your name? ",
-    
-]
-}
-*/
 
 
 // Auto Fake Reply
@@ -70,24 +79,20 @@ CHAT_BOX_INPUT.addEventListener('keypress', e => {
                         ${CHAT_BOX_INPUT.value} 
                     </div>`;
         displayText(text);
-        CHAT_BOX_INPUT.disabled = true; // Avoid multi input crash the fake chatbot
-        CHAT_BOX_INPUT.value = "";
+        CHAT_BOX_INPUT.disabled = true; // Avoid multi input crash the fake chatbot   
+        CHAT_BOX_INPUT.value = "";    
         autoScrolltoBottom();
         setTimeout( () => {otherMessages()}, 1000); // Simulate Server delay
     }
 })
 
-function displayText(text) {
-    CHAT_BOX_UPPERGRID.insertAdjacentHTML('beforeend', text);
-}
-
-function autoScrolltoBottom() {
-    CHAT_BOX_UPPERGRID.scrollTop = CHAT_BOX_UPPERGRID.scrollHeight - CHAT_BOX_UPPERGRID.clientHeight;
-}
-
 function otherMessages() {
+    // Want to fake reply 1 to 6, math.random * 5 + 0.1
+    let number = Math.ceil( (Math.random() * 5) + 0.1);
+
+    console.log(number);
     let text = `<div class="chat-box-other-messages"> 
-                    I don't understand.
+                    ${fakeMessagesArray[number]}
                 </div>`;
     typingMessages();
     setTimeout( () => {
@@ -95,6 +100,23 @@ function otherMessages() {
         autoScrolltoBottom();
         CHAT_BOX_INPUT.disabled = false; // Avoid multi input crash the fake chatbot
     }, 2100)     
+}
+
+
+// Delete all msg when closed tab 
+CHAT_BOX_BUTTON.addEventListener('click', e => {
+    if(CHAT_BOX.style.display === 'none') {
+        CHAT_BOX_UPPERGRID.innerHTML = "";
+    }
+})
+
+
+function displayText(text) {
+    CHAT_BOX_UPPERGRID.insertAdjacentHTML('beforeend', text);
+}
+
+function autoScrolltoBottom() {
+    CHAT_BOX_UPPERGRID.scrollTop = CHAT_BOX_UPPERGRID.scrollHeight - CHAT_BOX_UPPERGRID.clientHeight;
 }
     
 function typingMessages() {
@@ -106,3 +128,7 @@ function typingMessages() {
     autoScrolltoBottom();
     setTimeout( () => {CHAT_BOX_UPPERGRID.lastChild.remove()}, 2000); 
 }
+
+
+
+
