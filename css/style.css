@@ -80,7 +80,7 @@ nav {
 .shopping-cart-number {
     position: absolute;
     top: 3px;
-    right: 24px;
+    right: 30px;
     cursor: pointer;
 }
 
@@ -186,7 +186,7 @@ video {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: var(--card-text-color);
     background-color: var(--card-bg-color);
     opacity: 0.6;
