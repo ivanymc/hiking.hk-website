@@ -1,5 +1,5 @@
 :root {
-    --main-bg-color: #FFFFF6;
+    --main-bg-color: #ffffee;
     --main-text-color: #000;
     --main-btn-color: #9F9F9A;
     --main-link-color: #9F9F9A;
@@ -7,7 +7,7 @@
     --main-footer-color: #9F9F9A;
     --main-border-color: #d4cdcd;
 
-    --nav-bg-color: #FFFFF6;
+    --nav-bg-color: #ffffee;
     --nav-text-color: #000;
 
     --card-bg-color: #000;
@@ -47,7 +47,7 @@ textarea {
     Toggler
 */
 nav {
-    height: 6vh;
+    height: 7vh;
     background: var(--nav-bg-color) !important;
 }
 
@@ -70,6 +70,10 @@ nav {
     background: var(--main-bg-color) !important;
 }
 
+.navbar-collapse {
+    margin-top: 3px;
+}
+
 
 /*
     Shopping cart icon
@@ -83,9 +87,13 @@ nav {
 
 .shopping-cart-number {
     position: absolute;
-    top: 3px;
-    right: 30px;
+    top: -12px;
+    right: -25px;
     cursor: pointer;
+}
+
+.navbar-collapse {
+    background: var(--main-bg-color);
 }
 
 
