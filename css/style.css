@@ -49,6 +49,7 @@ textarea {
 nav {
     height: 7vh;
     background: var(--nav-bg-color) !important;
+    opacity: 0.8;
 }
 
 .navbar-brand > img {
